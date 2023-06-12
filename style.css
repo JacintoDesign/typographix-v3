@@ -25,6 +25,7 @@
 /* General */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,6 +50,78 @@ a {
     padding-bottom: 5px;
     border-bottom: 5px solid var(--on-background);
   }
+
+/* Navigation */
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-icon div {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--on-background);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.active div:nth-child(1) {
+  transform: translateY(0.6rem) rotate(-45deg);
+}
+
+.menu-icon.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active div:nth-child(3) {
+  transform: translateY(-0.75rem) rotate(45deg);
+}
+
+nav {
+  height: 100%;
+  background: transparent;
+  color: var(--on-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  width: 200px;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  font-size: 2rem;
+}
+
+nav ul li {
+  margin: 1rem 0;
+}
+
+nav ul li a {
+  color: var(--on-background);
+  text-decoration: none;
+}
+
+nav.active {
+  transform: translateX(0);
+}
 
 /* Sections */
 section {

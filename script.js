@@ -1,3 +1,4 @@
+// Dark Mode
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.getElementById('toggle-icon');
 
@@ -40,4 +41,12 @@ if (currentTheme) {
     toggleSwitch.checked = true;
     darkMode();
   }
+}
+
+// Navigation
+function toggleMenu() {
+  const nav = document.getElementById('nav');
+  const menuIcon = document.querySelector('.menu-icon');
+  nav.classList.toggle('active');
+  menuIcon.classList.toggle('active');
 }
