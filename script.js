@@ -6,14 +6,12 @@ const toggleIcon = document.getElementById('toggle-icon');
 function darkMode() {
   toggleIcon.children[0].textContent = 'Dark Mode';
   toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
-  imageMode('dark');
 }
 
 // Light Mode Styles
 function lightMode() {
   toggleIcon.children[0].textContent = 'Light Mode';
   toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-  imageMode('light');
 }
 
 // Switch Theme Dynamically
@@ -44,9 +42,15 @@ if (currentTheme) {
 }
 
 // Navigation
+const nav = document.getElementById('nav');
+const menuIcon = document.querySelector('.menu-icon');
+
 function toggleMenu() {
-  const nav = document.getElementById('nav');
-  const menuIcon = document.querySelector('.menu-icon');
   nav.classList.toggle('active');
   menuIcon.classList.toggle('active');
+}
+
+function hideMenu() {
+  nav.classList.remove('active');
+  menuIcon.classList.remove('active');
 }

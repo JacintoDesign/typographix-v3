@@ -136,14 +136,15 @@ h2 {
 }
 
 /* Section 1 */
+
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
   z-index: 100;
   position: fixed;
-  right: 25px;
-  top: 30px;
+  right: 15px;
+  top: 15px;
 }
 
 .theme-switch-wrapper span {
@@ -227,13 +228,13 @@ input:checked + .slider::before {
 
 @keyframes focus-in-contract {			
   0% {
-    letter-spacing:1em;
-    filter:blur(12px);
-    opacity:0;
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
   }
   100% {
-    filter:blur(0);
-    opacity:1;
+    filter: blur(0);
+    opacity: 1;
   }
 }
 
@@ -294,6 +295,7 @@ input:checked + .slider::before {
 }
 
 /* Section 5 */
+
 /* Wave */
 .wave {
   width: 100%;
@@ -315,4 +317,104 @@ input:checked + .slider::before {
 .footer p {
   text-align: center;
   color: white;
+}
+
+/* Media Queries --------------------------- */
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+  .nav-wrapper {
+    height: 60px;
+    width: 100vw;
+    background: var(--background);
+    position: fixed;
+    z-index: 2;
+  }
+
+  nav {
+    width: 100%;
+    background: var(--background);
+  }
+
+  nav ul {
+    position: relative;
+    left: -20px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  /* Header */
+  .header h1 {
+    font-size: 50px;
+    animation: focus-in-contract-mobile 3s linear 0s 1 normal none;
+  }
+
+  .social-media-icons {
+    font-size: 50px;
+    top: -50px;
+  }
+
+  .social-media-icons i {
+    animation: focus-in-contract-mobile 3s linear 0s 1 normal none;
+  }
+
+  @keyframes focus-in-contract-mobile {			
+    0% {
+      letter-spacing:.1em;
+      filter:blur(12px);
+      opacity:0;
+    }
+    100% {
+      filter:blur(0);
+      opacity:1;
+    }
+  }
+
+  /* Section 2 */
+  .main-image {
+    height: auto;
+    max-width: 85%;
+    top: -45%;
+    border-width: 5px;
+    padding: 10px;
+  }
+
+  /* Section 3 */
+  .image-container {
+    top: -10%;
+    height: 70vh;
+  }
+
+  .small-image {
+    height: auto;
+    width: 75%;
+    border-width: 5px;
+    padding: 10px;
+    margin: auto 5%;
+    position: relative;
+    left: 3.5%;
+  }
+
+  /* Section 4 */
+  .blog-title {
+    position: relative;
+    top: 25px;
+  }
+
+  .blog-container {
+    width: 80%;
+    top: 0;
+  }
+
+  /* Section 5 */
+  .wave > svg {
+    border-bottom: 20px solid #344E41;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
 }
