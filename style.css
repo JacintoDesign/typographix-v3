@@ -334,6 +334,42 @@ input:checked+.slider::before {
   }
 }
 
+/* Tablet Horizontal */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  nav {
+    background: var(--background);
+  }
+
+  nav ul {
+    position: relative;
+    left: -20px;
+  }
+
+  .header h1 {
+    animation: focus-in-contract-mobile 3s linear 0s 1 normal none;
+  }
+
+  .social-media-icons i {
+    animation: focus-in-contract-mobile 3s linear 0s 1 normal none;
+  }
+
+  .main-image {
+    height: auto;
+    width: 75%;
+    top: -5%;
+  }
+
+  .small-image {
+    height: 45%;
+    border-width: 5px;
+    padding: 10px;
+  }
+
+  .blog-container {
+    top: 0;
+  }
+}
+
 /* Tablet Vertical */
 @media screen and (min-width: 700px) and (max-width: 900px) {
   .nav-wrapper {
