@@ -201,6 +201,10 @@ h2 {
   }
 
 /* Section 2 */
+#section-2 {
+  margin-top: 25px;
+}
+
 .main-image {
   height: 50%;
   width: auto;
