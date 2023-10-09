@@ -133,7 +133,7 @@ h2 {
 
 /* Section 1 */
 /* Dark Mode Switch */
-.theme-switcher {
+.theme-switcher { 
   display: flex;
   align-items: center;
   z-index: 100;
