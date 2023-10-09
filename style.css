@@ -201,8 +201,8 @@ h2 {
   }
 
 /* Section 2 */
-#section-2 {
-  margin-top: 25px;
+#section-2 h2 {
+  margin-top: 50px;
 }
 
 .main-image {
