@@ -75,6 +75,15 @@ a {
   transform: translateY(-0.75rem) rotate(45deg);
 }
 
+.nav-wrapper {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background: var(--background);
+  width: 100%;
+  z-index: 10;
+}
+
 nav {
   height: 100%;
   color: var(--on-background);
